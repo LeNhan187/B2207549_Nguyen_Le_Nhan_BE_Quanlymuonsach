@@ -9,6 +9,11 @@ const register = async (req, res) => {
     try{
         const {email, password, role, refId, refModel } = req.body
 
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailRegex.test(email)) {
+            return res.status(400).json({ message: "Email không hợp lệ" });
+        }
+
         if( !password || password.trim().length < 6 )
             return res.status(400).json({ message: 'Mật khẩu phải có ít nhất 6 kí tự'})
 
