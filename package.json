@@ -7,7 +7,7 @@
     "dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Le Nhan",
   "license": "ISC",
   "description": "",
   "dependencies": {
