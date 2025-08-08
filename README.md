@@ -1,2 +1,1 @@
-cài đặc env 
-URL tương thích với mongodb
+cài đặc env MONGO_URI
