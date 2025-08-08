@@ -13,9 +13,9 @@ const createBorrow = async (req, res) => {
             status: 'Đang mượn'
         });
 
-        // 2. Kiểm tra nếu đã mượn đủ 3 cuốn
-        if (currentBorrows.length >= 3) {
-            return res.status(400).json({ message: 'Bạn đã mượn đủ 3 cuốn sách. Vui lòng trả sách cũ trước khi mượn thêm.' });
+        // 2. Kiểm tra nếu đã mượn đủ 5 cuốn
+        if (currentBorrows.length >= 5) {
+            return res.status(400).json({ message: 'Bạn đã mượn đủ 5 cuốn sách. Vui lòng trả sách cũ trước khi mượn thêm.' });
         }
 
         // 3. Kiểm tra xem có cuốn nào bị quá hạn không

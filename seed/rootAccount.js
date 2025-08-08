@@ -3,7 +3,7 @@ const Staff = require('../models/Staff');
 const bcrypt = require('bcryptjs');
 
 async function createRootAdmin() {
-  const existing = await Account.findOne({ email: 'root@admin.com' });
+  const existing = await Account.findOne({ email: 'root@gmail.com' });
   if (existing) return;
 
   // Tạo Staff cho tài khoản admin gốc
