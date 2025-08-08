@@ -20,7 +20,7 @@ async function createRootAdmin() {
   // Tạo tài khoản admin gắn với Staff
   const hashedPass = await bcrypt.hash('nhan2004', 10);
   const rootAccount = new Account({
-    email: 'root@admin.com',
+    email: 'root@gmail.com',
     password: hashedPass,
     role: 'admin',
     refId: rootStaff._id,
